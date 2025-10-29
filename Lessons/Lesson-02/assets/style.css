@@ -1,0 +1,199 @@
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #d32222;
+    text-decoration: underline;
+}
+
+header {
+    background-color: #d4d42f;
+}
+
+a {
+    color: #66d366;
+    text-decoration: none;
+    background-color: #dec697;
+    text-align: center;
+
+    margin: 1rem auto;
+    padding: 1rem;
+
+    display: block;
+    width: 30%;
+    border-radius: 0.5rem;
+    border: 1px solid #d32222;
+}
+
+a:hover {
+    background-color:#939311;
+    color: white;
+}
+
+#myFlexbox {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    margin: 1rem 2rem;
+}
+
+.box {
+    background-color: #d4d42f;
+    border: 1px dashed red;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 80px;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+#special {
+    background-color: red;
+
+
+} */
+
+/* @media only screen and (min-width: 600px) {
+
+    body {
+        background-color: green;
+    }
+	
+    .box {
+         width: 40%;
+    }
+}
+
+
+@media only screen and (min-width: 780px) {
+
+    body {
+        background-color: yellow;
+    }
+	
+    .box {
+         width: 25%;
+    }
+} */
+
+
+/* @media only screen and (min-width: 1200px) {
+
+    body {
+        background-color: #f1ce8d;
+    }
+	
+    .box {
+         width: 12%;
+    }
+} */
+
+
+
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+#special {
+    background-color: red;
+}
+
+aside {
+    background-color: aqua;
+    margin: 1rem;
+}
+
+section {
+    
+}
+@media only screen and (min-width: 600px) {  
+    .box {
+        width: 40%;
+    }
+
+    body {
+        background-color: green;
+    }
+    main {
+        display: flex;
+    }
+
+    aside {
+        width: 35%;
+        height: 200px;
+    }
+
+    section {
+         width: 60%;
+
+    }
+    article {
+        height: 80px;
+        margin-bottom: 1rem;
+        width: 100%;
+}
+
+}
+
+
+@media only screen and (min-width: 780px) {
+
+    section {
+        display: flex;
+    }
+    article {
+        width: 45%;
+        margin-right: 1rem;
+    }
+	
+    .box {
+         width: 25%;
+    }
+}
