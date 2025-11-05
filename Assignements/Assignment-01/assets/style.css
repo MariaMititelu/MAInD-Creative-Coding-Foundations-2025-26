@@ -1,0 +1,327 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*structure*/
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+#page-top {
+    background-color:#5a4464;
+    color:#ebdcf3;
+    padding: 2rem;
+    border-radius: 0 0 1rem 1rem;
+    align-content: center;
+}
+
+body {
+    background-color:#DBB7EB;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    padding: 1rem;
+}
+
+footer {
+    background-color:#5a4464;
+    color:#ebdcf3;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+/* buttons and inputs*/
+
+
+input, button {
+    border-radius: 1rem;
+    border: 1.5px solid #eddff3;
+    padding: auto 0.5rem;
+    height: 2rem;
+    background-color: #b982d3;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 0.3rem 0.3rem #7a539033;
+}
+
+#book-types {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+}
+
+#book-types a {
+    background-color:#8a639f;
+    border-radius: 1rem;
+    color: white;
+    padding: 0.5rem;
+    box-shadow: 0 0.3rem 0.3rem #7a539033;
+}
+
+#book-types a:hover {
+    background-color: #62337b;
+    cursor: pointer;
+}
+
+#input-form {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.input-section label {
+    font-size: 1rem;
+    font-style: bold;
+    color: #432056;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#text-input {
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 550;
+    color: #ebdcf3;
+    padding: 0 1rem;
+    margin: 0 1rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ebdcf3;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+main {
+    padding: 1rem;
+    background-color:#ebdcf3;
+    flex-grow: 1;
+    margin: 0 0.5rem;
+    border-radius: 1.5rem;
+}
+
+/* select-view buttons */
+
+.select-view {
+    width: 7rem;
+    box-shadow: 0 0.3rem 0.3rem #7a539033;
+}
+
+#button-list:hover {
+     background-color: #62337b;
+    cursor: pointer;
+}
+
+#button-list:active {
+     background-color: #d2bdde;
+     color: #3f1a53;
+    cursor: pointer;
+}
+
+#button-card:hover {
+     background-color: #62337b;
+    cursor: pointer;
+}
+
+#button-card:active {
+     background-color: #d2bdde;
+     color: #3f1a53;
+    cursor: pointer;
+}
+
+
+/* add-button styling */
+
+#button-add:hover {
+    background-color: #62337b;
+    cursor: pointer;
+}
+
+#button-add:active {
+     background-color: #d2bdde;
+     color: #3f1a53;
+    cursor: pointer;
+}
+
+
+/* list item style and book section */
+
+li {
+    list-style-type: none;
+    background-color: #8a639f;
+    border: 1px solid #ebdcf3;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(241, 228, 250);
+}
+
+.img {
+    width: 150px;
+    height: auto;
+    border: 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0.3rem 0.3rem #7a539033;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.description {
+    margin: 1rem;
+}
+
+.button-delete {
+    margin: 2rem;
+    box-shadow: 0 0.3rem 0.3rem #37204433;
+}
+
+.button-delete:hover {
+     background-color: #62337b;
+    cursor: pointer;
+}
+
+.button-delete:active {
+     background-color: #d2bdde;
+     color: #3f1a53;
+    cursor: pointer;
+}
+
+/* element-style for list style */
+
+ul.list li {
+    border-bottom: 1px solid #ebdcf3;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    box-shadow: 0 0.3rem 0.3rem #7a539033;
+}
+
+ul.list li:first-child {
+    padding-top: 0;
+}
+
+ul.list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+ul.list li p {
+   flex-grow: 1;
+}
+
+
+/* element-style for card style */
+
+ul.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+ul.card li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #7c56a0;
+    width: 100%;
+    box-shadow: 0 0.3rem 0.3rem #9a70b233;
+}
+
+/* footer */
+
+#page-bottom h3 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#page-bottom p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 0.3rem;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* media queries*/
+
+@media (min-width: 600px) {
+    ul.card li {
+        width: 45%;
+         gap: 1rem;
+    }
+}
+
+
+@media (min-width: 780px) {
+    ul.card li {
+        width: 15rem;
+        gap: 1rem;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    ul.card li {
+        width: 15%;
+         gap: 1rem;
+    }
+}
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria's digital library</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js" defer></script>
+</head>
+<body>
+    <!-- page top presentation -->
+     <div id="page-top">
+        <h1>Maria's books</h1>
+        <h2>Welcome to Maria's digital library! This is a space where you can read about books, find new book recomandations and view my opinions about different books that I have read! Enjoy! </h2>
+    </div>
+
+
+     <!-- navigation panel -->
+
+    <header>
+         <nav id="book-types">
+            <a>Fiction Books</a>
+            <a>Memoir Books</a>
+            <a>Crime Books</a>
+            <a>History Books</a>
+            <a>Mythology Books</a>
+            <a>Fantasy Books</a>
+            <a>Non-fiction Books</a>
+            <a>Adventure Books</a>
+            <a>SF Books</a>
+        </nav>
+
+    
+    <!-- input fields -->
+        <!-- first input field -->
+        <form id="input-form">
+            <div class="input-section">
+                <label for="text-input">What book are you interested in?</label>
+                <input type="text" id="text-input" placeholder="Search for a book">
+            </div>
+
+            <!-- second input field -->
+            <div class="input-section">
+                <label for="img-input" id="label-2">Add book image</label>
+                <input type="text" id="img-link" placeholder="Add book image">
+            </div>
+
+            <div class="input-section">
+                <label for="description-input" id="label-3">Add book description</label>
+                <input type="text" id="book-description" placeholder="Add book description">
+            </div>
+
+                <button type="button" id="button-add">Add a new book</button>
+        </form>
+
+        <!-- select-view buttons -->
+        <nav>
+            <button id="button-list" class="select-view">Books list</button>
+            <button id="button-card" class="select-view">Books view</button>
+        </nav>
+    </header>
+
+    <!-- book presentations  -->
+    <main>
+        <ul class="card" id="books-container">
+            <li class="book">
+                <img src="images/the book thief.jpg" class="img">
+                <p class="title">The book thief by Markus Zusak</p>
+                <p class="description">A very emotional, deep and heart-breaking book! This is by far one of my favourite books. I really enjoyed reading it. I was hooked by Zusak idea of narator's point of view.</p>
+                <button class="button-delete">Delete</button>
+            </li>
+            <li class="book">
+                <img src="images/jezebel.jpg" class="img">
+                <p class="title">Jezebel by Irene Nemirovsky</p>
+                <p class="description">This book both shocked me and hooked me. I was also so angry with the main character!!!! This book really made me be glad about the relationship that I have with my mom! Anyway, this book is a 10!</p>
+                <button class="button-delete">Delete</button>
+            </li>
+            <li class="book">
+                <img src="images/ariadne.jpg" class="img">
+                <p class="title">Ariadne by Jennifer Saint</p>
+                <p class="description">I absolutely love mythology books, but I ADORE the ones that retell the myth from a feminine perspective!</p>
+                <button class="button-delete">Delete</button>
+            </li>
+            <li class="book">
+                <img src="images/5th_Wave_.jpg" class="img">
+                <p class="title">The fifth wave by Rick Yancey</p>
+                <p class="description">This is by far my favourite SF trilogy. Absolutely breath-taking and engaging! I remember that I literally devoured the whole 3 books!</p>
+                <button class="button-delete">Delete</button>
+            </li>
+            <li class="book">
+                <img src="images/almond.jpg" class="img">
+                <p class="title">Almond by Won-Pyung Sohn</p>
+                <p class="description">One of my favourite books. I literally devoured it in one sit! I absolutely loved how the charater changed from the beggining to the end.</p>
+                <button class="button-delete">Delete</button>
+            </li>
+            <li class="book">
+                <img src="images/the girl with the louding voice.jpg" class="img">
+                <p class="title">The girl with the louding voice by Abe Dare</p>
+                <p class="description">I am a newby when it comes to African literature, but this book just made me fall in love with this kind of books! I can't wait to read the continuation of this book!</p>
+                <button class="button-delete">Delete</button>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <div id="page-bottom">
+            <h3>Thank you!</h3>
+        <p>Don't forget to take your daily dosis of reading!</p>
+        </div>
+    </footer>
+</body>
+</html>
