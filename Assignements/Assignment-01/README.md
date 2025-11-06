@@ -11,11 +11,11 @@ Starting from the concept of a pinboard, implement a web page that:
 
 ##Screenshots
 
-<img src= "docs/Maria Mititelu_page-card-view.png">
-<img src= "docs/Maria Mititelu_list-view.png">
-<img src= "docs/Maria Mititelu_Delete book.png">
-<img src= "docs/Maria Mititelu_adding a new book.png">
-<img src= "docs/Maria Mititelu_adding a new book 2.png">
+<img src= "DOCS/Maria_Mititelu_page-card-view.png">
+<img src= "DOCS/Maria_Mititelu_list-view.png">
+<img src= "DOCS/Maria_Mititelu_Delete_book.png">
+<img src= "DOCS/Maria_Mititelu_adding_new_book.png">
+<img src= "DOCS/Maria_Mititelu_adding_new_book2.png">
 
 
 ##Short project description (general concept, functional logic and interaction modalities, 300 characters)
