@@ -96,6 +96,7 @@ input, button {
 #input-form {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     gap: 0.5rem;
     margin-bottom: 1rem;
@@ -104,7 +105,6 @@ input, button {
 .input-section {
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 0.5rem;
 }
 
@@ -187,7 +187,7 @@ main {
 #button-add:active {
      background-color: #d2bdde;
      color: #3f1a53;
-    cursor: pointer;
+     cursor: pointer;
 }
 
 
@@ -198,7 +198,6 @@ li {
     background-color: #8a639f;
     border: 1px solid #ebdcf3;
     border-radius: 2rem;
-    margin: 1rem 0;
     font-family:'Times New Roman', Times, serif;
     color: rgb(241, 228, 250);
 }
@@ -267,7 +266,6 @@ ul.card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     gap: 0.6rem;
 }
 
@@ -279,6 +277,11 @@ ul.card li {
     background-color: #7c56a0;
     width: 100%;
     box-shadow: 0 0.3rem 0.3rem #9a70b233;
+    box-sizing: border-box;
+}
+
+ul.card li .button-delete {
+    margin-top: auto;
 }
 
 /* footer */
@@ -303,23 +306,23 @@ ul.card li {
 @media (min-width: 600px) {
     ul.card li {
         width: 45%;
-         gap: 1rem;
+        /* gap: 1rem; */
     }
 }
 
 
 @media (min-width: 780px) {
     ul.card li {
-        width: 15rem;
-        gap: 1rem;
+        width: 30%;
+        /* gap: 1rem; */
     }
 }
 
 
 @media (min-width: 1200px) {
     ul.card li {
-        width: 15%;
-         gap: 1rem;
+        width: 22%;
+         /* gap: 1rem; */
     }
 }
 
