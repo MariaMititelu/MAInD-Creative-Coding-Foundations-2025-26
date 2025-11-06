@@ -38,4 +38,4 @@ Returns: -
 Name of the function: button.addEventListener
 Arguments : type of event, 'callBack' function;
 Description: makes the button delete to delete the book on click
-Returns: -
+Returns: 
