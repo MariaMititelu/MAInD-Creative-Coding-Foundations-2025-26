@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/script.js" defer></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Maria's TicTacToe</title>
+</head>
+
+<body>
+    <section id="first-step" class="hidden">
+        <div class="players">
+            <div class="first-player">
+                <div class="avatar-selector">
+                    <img class="avatar-preview selected" src="">
+                    <img class="avatar-preview" src="">
+                    <img class="avatar-preview" src="">
+                </div>
+                <div class="username-input-wraper">
+                    <input id="first-username-input" placeholder="First player username">
+                </div>
+            </div>
+            <div class="second-player">
+                <div class="avatar-selector">
+                    <img class="avatar-preview selected" src="">
+                    <img class="avatar-preview" src="">
+                    <img class="avatar-preview" src="">
+                </div>
+                <div class="username-input-wraper">
+                    <input id="second-username-input" placeholder="Second player username">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="start-game-btn">Start Game!</button>
+        </div>
+    </section>
+    <section id="game-step">
+        <div id="score">
+            <div class="player">
+                <img class="avatar" id="first-player-avatar">
+                <span class="username" id="first-player-username">Miko</span>
+                <span class="points" id="first-player-points">32</span>
+            </div>
+            <span>:</span>
+            <div class="player">
+                <span class="points" id="second-player-points">15</span>
+                <span class="username" id="second-player-username">Bilbo</span>
+                <img class="avatar" id="second-player-avatar">
+            </div>
+        </div>
+        <div id="player-move">Move: Miko</div>
+        <div id="tictactoe-table">
+            <div class="row">
+                <div class="cell" id="cell-1">❌</div>
+                <div class="cell" id="cell-2"></div>
+                <div class="cell" id="cell-3"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="cell-4"></div>
+                <div class="cell" id="cell-5"></div>
+                <div class="cell" id="cell-6"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="cell-7"></div>
+                <div class="cell" id="cell-8">⭕</div>
+                <div class="cell" id="cell-9"></div>
+            </div>
+        </div>
+        <div class="actions">
+            <button id="restart-game">Restart Game!</button>
+            <button id="restart-score">Restart Score!</button>
+        </div>
+        <div id="overlay" class="hidden">
+        <div class="dialog">
+            <p id="dialog-content">akjneignejgreg</p>
+            <button id="continue-btn">Continue</button>
+        </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
