@@ -10,23 +10,30 @@
 </head>
 
 <body>
-    <section id="first-step" class="hidden">
+    <h1>Tic-Tac-Toe</h1>
+
+    <!-- first step: username and avatar choose page-->
+    <section id="first-step">
         <div class="players">
+
+    <!-- first player setup-->        
             <div class="first-player">
                 <div class="avatar-selector">
-                    <img class="avatar-preview selected" src="">
-                    <img class="avatar-preview" src="">
-                    <img class="avatar-preview" src="">
+                    <img class="avatar-preview selected" id="avatar-01" src="assets/images/capibara 2.jpg" onclick="selectAvatar('left', 'avatar-01')">
+                    <img class="avatar-preview" id="avatar-02" src="assets/images/killing pinguin.jpg" onclick="selectAvatar('left', 'avatar-02')">
+                    <img class="avatar-preview" id="avatar-03" src="assets/images/teddy 2.jpg" onclick="selectAvatar('left', 'avatar-03')">
                 </div>
                 <div class="username-input-wraper">
                     <input id="first-username-input" placeholder="First player username">
                 </div>
             </div>
+
+    <!-- second player setup-->  
             <div class="second-player">
                 <div class="avatar-selector">
-                    <img class="avatar-preview selected" src="">
-                    <img class="avatar-preview" src="">
-                    <img class="avatar-preview" src="">
+                    <img class="avatar-preview selected" id="avatar-11" src="assets/images/cat.jpg" onclick="selectAvatar('right', 'avatar-11')">
+                    <img class="avatar-preview" id="avatar-12" src="assets/images/pingu.jpg" onclick="selectAvatar('right', 'avatar-12')">
+                    <img class="avatar-preview" id="avatar-13" src="assets/images/timmy.jpg" onclick="selectAvatar('right', 'avatar-13')">
                 </div>
                 <div class="username-input-wraper">
                     <input id="second-username-input" placeholder="Second player username">
@@ -34,54 +41,60 @@
             </div>
         </div>
         <div>
-            <button id="start-game-btn">Start Game!</button>
+            <button id="start-game-btn" onclick="startGame()">Start Game!</button>
         </div>
     </section>
-    <section id="game-step">
+
+    <!-- second step: tictactoe game page-->
+    <section id="game-step" class="hidden">
         <div id="score">
             <div class="player">
                 <img class="avatar" id="first-player-avatar">
-                <span class="username" id="first-player-username">Miko</span>
-                <span class="points" id="first-player-points">32</span>
+                <span class="username" id="first-player-username"></span>
+                <span class="symbol" id="first-player-symbol"></span>
+                <span class="points" id="first-player-points"></span>
             </div>
             <span>:</span>
             <div class="player">
-                <span class="points" id="second-player-points">15</span>
-                <span class="username" id="second-player-username">Bilbo</span>
+                <span class="points" id="second-player-points"></span>
+                <span class="symbol" id="second-player-symbol"></span>
+                <span class="username" id="second-player-username"></span>
                 <img class="avatar" id="second-player-avatar">
             </div>
         </div>
         <div id="player-move">Move: Miko</div>
+
+    <!-- tictactoe table -->
         <div id="tictactoe-table">
             <div class="row">
-                <div class="cell" id="cell-1">❌</div>
-                <div class="cell" id="cell-2"></div>
-                <div class="cell" id="cell-3"></div>
+                <div class="cell" id="cell-1" onclick="move(0,0)"></div>
+                <div class="cell" id="cell-2" onclick="move(0,1)"></div>
+                <div class="cell" id="cell-3" onclick="move(0,2)"></div>
             </div>
             <div class="row">
-                <div class="cell" id="cell-4"></div>
-                <div class="cell" id="cell-5"></div>
-                <div class="cell" id="cell-6"></div>
+                <div class="cell" id="cell-4" onclick="move(1,0)"></div>
+                <div class="cell" id="cell-5" onclick="move(1,1)"></div>
+                <div class="cell" id="cell-6" onclick="move(1,2)"></div>
             </div>
             <div class="row">
-                <div class="cell" id="cell-7"></div>
-                <div class="cell" id="cell-8">⭕</div>
-                <div class="cell" id="cell-9"></div>
+                <div class="cell" id="cell-7" onclick="move(2,0)"></div>
+                <div class="cell" id="cell-8" onclick="move(2,1)"></div>
+                <div class="cell" id="cell-9" onclick="move(2,2)"></div>
             </div>
         </div>
         <div class="actions">
-            <button id="restart-game">Restart Game!</button>
-            <button id="restart-score">Restart Score!</button>
+            <button id="restart-game" onclick="resetGame()">Restart Game!</button>
+            <button id="restart-score" onclick="resetScore()">Restart Score!</button>
         </div>
         <div id="overlay" class="hidden">
+
+    <!-- dialog textbox-->    
         <div class="dialog">
-            <p id="dialog-content">akjneignejgreg</p>
-            <button id="continue-btn">Continue</button>
+            <p id="dialog-content"></p>
+            <button id="continue-btn" onclick="continueGame()">Continue</button>
         </div>
         </div>
     </section>
-
-
 </body>
 
 </html>

@@ -19,6 +19,25 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+
+body {
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: #4682C7;
+}
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 2rem;
+    font-size: 3rem;
+    color: #4682C7;
+}
+
+/* first-step of the game - choosing the avatar */
+
 #first-step {
     display: flex;
     flex-direction: column;
@@ -30,7 +49,7 @@ time, mark, audio, video {
 
 .players {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 .avatar-preview {
@@ -38,6 +57,7 @@ time, mark, audio, video {
     width: 3rem;
     border-radius: 50%;
     border: 2px solid transparent;
+    box-shadow: 0 6px 15px rgba(122, 128, 197, 0.35);
 }
 
 .avatar-selector {
@@ -55,6 +75,7 @@ time, mark, audio, video {
 }
 
 
+/* second-step of the game - playing thr game */
 
 #game-step {
     display: flex;
@@ -76,6 +97,7 @@ time, mark, audio, video {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(122, 128, 197, 0.35);
 }
 
 .player {
@@ -88,6 +110,8 @@ time, mark, audio, video {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 15px rgba(122, 128, 197, 0.35);
 }
 
 .row {
@@ -107,6 +131,7 @@ time, mark, audio, video {
 
 .actions {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
@@ -122,8 +147,130 @@ time, mark, audio, video {
 .dialog {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
-    background-color: white;
+    background-color: whitesmoke;
     padding: 2rem;
+    width: 8rem;
+    height: 7rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 15px rgba(122, 128, 197, 0.35);
 }
+
+#continue-btn {
+    background: #aeb1ee;
+    background: radial-gradient(circle, rgba(174, 177, 238, 1) 0%, rgba(233, 148, 148, 1) 100%);
+    border-radius: 0.75rem;
+    border: 0.5px solid white;
+    color: white;
+    height: 1.5rem;
+}
+
+#continue-btn:hover{
+    box-shadow: 0 6px 15px rgba(122, 128, 197, 0.35);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#first-username-input {
+    background-color:#EEAECA;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(122, 128, 197, 0.35);
+}
+
+#second-username-input {
+    background-color: #94BBE9;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(122, 128, 197, 0.35);
+}
+
+/* buttons */
+
+#start-game-btn {
+    background: #aeb1ee;
+    background: radial-gradient(circle, rgba(174, 177, 238, 1) 0%, rgba(233, 148, 148, 1) 100%);
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    color: white;
+   
+}
+
+
+#restart-game {
+    background: #aeb1ee;
+    background: radial-gradient(circle, rgba(174, 177, 238, 1) 0%, rgba(233, 148, 148, 1) 100%);
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    color: white;
+}
+
+#restart-score {
+   background: #aeb1ee;
+    background: radial-gradient(circle, rgba(174, 177, 238, 1) 0%, rgba(233, 148, 148, 1) 100%);
+    border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    color: white;
+}
+
+#start-game-btn:hover,
+#restart-game:hover,
+#restart-score:hover {
+    box-shadow: 0 6px 15px rgba(122, 128, 197, 0.35);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.second-player, .first-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cell-1 {
+    border-top-left-radius: 1.5rem;
+}
+
+#cell-3 {
+    border-top-right-radius: 1.5rem;
+}
+
+#cell-7 {
+    border-bottom-left-radius: 1.5rem;
+}
+
+#cell-9 {
+    border-bottom-right-radius: 1.5rem;
+}
+
+
+/* media queries*/
+
+@media (min-width: 780px) {
+    .actions {
+        flex-direction: row;
+    }
+}
+
+
+
+
+
+
+
 
