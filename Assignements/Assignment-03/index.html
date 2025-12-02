@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/script.js" defer></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <title>Maria's TicTacToe</title>
+</head>
+
+<body>
+    <!-- first step: username and avatar choose page-->
+    <section id="first-step">
+        <div class="logo-container">
+            <img src="assets/images/AoT_Logo.png" class="logo">
+            <h1>Tic-Tac-Toe</h1>
+        </div>
+        <img src="assets/images/04.png" class="background">
+        <div class="players">
+
+            <!-- first player setup-->
+            <div class="first-player">
+                <div class="avatar-selector">
+                    <label for="avatar">Choose player A avatar:</label>
+                    <select name="avatar" id="avatar-left">
+                        <option value="1">Armin Arlert</option>
+                        <option value="2">Mikasa Ackermann</option>
+                        <option value="188">Eren Yeager</option>
+                        <option value="5">Levi Ackermann</option>
+                        <option value="10">Sasha Braun</option>
+                        <option value="101">Historia Reiss</option>
+                    </select>
+                </div>
+                <div class="username-input-wraper">
+                    <input id="first-username-input" placeholder="First player username">
+                </div>
+            </div>
+
+            <!-- second player setup-->
+            <div class="second-player">
+                <div class="avatar-selector">
+                    <label for="avatar">Choose player B avatar:</label>
+                    <select name="avatar" id="avatar-right">
+                        <option value="86">Reiner Braun</option>
+                        <option value="87">Annie Lionhardt</option>
+                        <option value="88">Pieck Finger</option>
+                        <option value="91">Porco Galliard</option>
+                        <option value="95">Betholdt Hoover</option>
+                        <option value="184">Zeke Yeager</option>
+                    </select>
+                </div>
+                <div class="username-input-wraper">
+                    <input id="second-username-input" placeholder="Second player username">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="start-game-btn" onclick="startGame()">Start Game!</button>
+        </div>
+    </section>
+
+    <!-- second step: tictactoe game page-->
+    <section id="game-step" class="hidden">
+        <div class="logo-container-left">
+            <img src="assets/images/AoT_Logo.png" class="logo">
+            <h1>Tic-Tac-Toe</h1>
+        </div>
+        <img src="assets/images/02.jpg" class="background">
+        <div id="score">
+            <div class="player">
+                <img class="avatar" id="first-player-avatar">
+                <span class="username" id="first-player-username"></span>
+                <span class="symbol" id="first-player-symbol"></span>
+                <span class="points" id="first-player-points"></span>
+                <span class="alias" id="first-player-alias"></span>
+            </div>
+            <span>:</span>
+            <div class="player">
+                <span class="points" id="second-player-points"></span>
+                <span class="symbol" id="second-player-symbol"></span>
+                <span class="username" id="second-player-username"></span>
+                <img class="avatar" id="second-player-avatar">
+                <span class="alias" id="second-player-alias"></span>
+            </div>
+        </div>
+        <div id="player-move"></div>
+
+        <!-- tictactoe table -->
+        <div id="tictactoe-table">
+            <div class="row">
+                <div class="cell" id="cell-1" onclick="move(0,0)"></div>
+                <div class="cell" id="cell-2" onclick="move(0,1)"></div>
+                <div class="cell" id="cell-3" onclick="move(0,2)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="cell-4" onclick="move(1,0)"></div>
+                <div class="cell" id="cell-5" onclick="move(1,1)"></div>
+                <div class="cell" id="cell-6" onclick="move(1,2)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="cell-7" onclick="move(2,0)"></div>
+                <div class="cell" id="cell-8" onclick="move(2,1)"></div>
+                <div class="cell" id="cell-9" onclick="move(2,2)"></div>
+            </div>
+        </div>
+        <div class="actions">
+            <button id="restart-game" onclick="resetGame()">Restart Game!</button>
+            <button id="restart-score" onclick="resetScore()">Restart Score!</button>
+        </div>
+        <div id="overlay" class="hidden">
+
+            <!-- dialog textbox-->
+            <div class="dialog">
+                <p id="dialog-content"></p>
+                <button id="continue-btn" onclick="continueGame()">Continue</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,420 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Oswald';
+}
+
+@font-face {
+    font-family: 'Ditty';
+    src: url('./fonts/Ditty.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+body {
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    font-family: 'Oswald';
+    font-size: 1.5rem;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Ditty';
+    margin-top: -2rem;
+    text-shadow: 2px 2px 4px #848282;
+}
+
+/* first-step of the game - choosing the avatar */
+select {
+    background-color: #d2c4ae;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #403535;
+    font-family: Ditty
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: fit-content;
+    height: 170px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+#first-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: #403535;
+}
+
+.players {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 3rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* second-step of the game - playing thr game */
+
+#game-step .background {
+    opacity: 80%;
+    filter: blur(1px);
+}
+
+#game-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+}
+
+.logo-container-left img {
+    height: 100px;
+}
+
+.logo-container-left h1 {
+    font-size: 1.4rem;
+    margin-top: -1rem;
+}
+
+
+#score {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+.avatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.player {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.alias {
+    position: absolute;
+    bottom: -30px;
+    font-size: 0.9rem;
+}
+
+#second-player-alias {
+    right: 0px;
+}
+
+#tictactoe-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 1.5rem;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #294023;
+    padding: 2rem;
+    width: 10rem;
+    height: 7rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 15px rgba(122, 128, 197, 0.35);
+}
+
+#continue-btn {
+    background: #403535;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 1.7rem;
+}
+
+#continue-btn:hover {
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.35);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#first-username-input {
+    background-color: #d2c4ae;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #403535;
+}
+
+#second-username-input {
+    background-color: #d2c4ae;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #403535;
+}
+
+#player-move {
+    color: white;
+}
+
+/* buttons */
+
+#start-game-btn {
+    background: #403535;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 3rem;
+    width: 12rem;
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 2rem;
+}
+
+
+#restart-game {
+    background: #294023;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 1.7rem;
+}
+
+
+#restart-score {
+    background: #294023;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 1.7rem;
+}
+
+#start-game-btn:hover,
+#restart-game:hover,
+#restart-score:hover {
+    box-shadow: 0 6px 8px rgba(73, 55, 55, 0.558);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.second-player,
+.first-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cell-1 {
+    border-top-left-radius: 1.5rem;
+}
+
+#cell-3 {
+    border-top-right-radius: 1.5rem;
+}
+
+#cell-7 {
+    border-bottom-left-radius: 1.5rem;
+}
+
+#cell-9 {
+    border-bottom-right-radius: 1.5rem;
+}
+
+
+/* media queries*/
+
+@media (min-width: 700px) {
+    .actions {
+        flex-direction: row;
+    }
+
+    .players {
+        flex-direction: row;
+    }
+
+    .cell {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+@media (min-width: 900px) {
+    .logo-container-left {
+        position: absolute;
+        z-index: 2;
+        top: 2rem;
+        left: 2rem;
+    }
+}
